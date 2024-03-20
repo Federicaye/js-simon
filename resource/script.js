@@ -16,9 +16,9 @@ function generateRandomNumber(min, max, list, howMany) {
     return list;
 }
 
-let list = [];
+/* let list = [];
 generateRandomNumber(6, 12, list, 5);
-console.log(list);
+console.log(list); */
 
 let game = document.getElementById("game");
 
@@ -35,16 +35,17 @@ function createsBoxWithNumber(list, length) { //list contiene array numeri, leng
     return "ciao";
 }
 
-let listB = [2, 5, 7, 8];
+/* let listB = [2, 5, 7, 8];
 lenghtB = listB.length;
-createsBoxWithNumber(listB, lenghtB);
+createsBoxWithNumber(listB, lenghtB); */
 
 let play = document.getElementById("play");
+let listy = [];
+function playGame() {
+    game.innerHTML = "";
 
-function playGame(){
-    let listy = [];
-    
-    let listr = generateRandomNumber(1,100,listy,5);
+
+    let listr = generateRandomNumber(1, 100, listy, 5);
     console.log(listy);
     createsBoxWithNumber(listr, listr.length)
 }
@@ -55,22 +56,33 @@ play.addEventListener("click", function () {
     console.log(listy);
     createsBoxWithNumber(listr, listr.length)
     */
-   playGame();
-}) 
+    playGame();
+})
 
 let buttonSendNumbers = document.getElementById("buttonSendNumbers");
 
 //raccolgo numeri dell'utente
+let userNumbers = [];
 buttonSendNumbers.addEventListener("click", function (e) {
     e.preventDefault();
     const listNumber = document.querySelectorAll(".f");
     console.log(listNumber);
-    let userNumbers = [];
+
     listNumber.forEach(element => {
         userNumbers.push(element.value);
         console.log(element.value);
     });
     console.log(userNumbers);
-    createsBoxWithNumber (userNumbers, userNumbers.length);
+    createsBoxWithNumber(userNumbers, userNumbers.length);
 })
 
+let resultlist = "";
+userNumbers.forEach(element => {
+    let confront = listy.includes(element);
+    if (confront) {
+        resultlist.push(element);
+
+    }
+ console.log(resultlist);
+ console.log(confront);
+})
