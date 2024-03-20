@@ -42,11 +42,15 @@ createsBoxWithNumber(listB, lenghtB);
 
 let buttonSendNumbers = document.getElementById("buttonSendNumbers");
 
+//raccolgo numeri dell'utente
 buttonSendNumbers.addEventListener("click", function (e) {
     e.preventDefault();
-    const listNumber = document.querySelectorAll(".f").values;
+    const listNumber = document.querySelectorAll(".f");
     console.log(listNumber);
+    let userNumbers = [];
     listNumber.forEach(element => {
-        console.log(element);
+        userNumbers.push(element.value);
+        console.log(element.value);
+        console.log(userNumbers);
     });
 })
