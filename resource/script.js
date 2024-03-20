@@ -22,14 +22,21 @@ generateRandomNumber(6, 12, list, 5);
 console.log(list);
 
 let game = document.getElementById("game");
-function createsBoxWithNumber(list, length) {
-    let box = document.createElement('div');
-    box.classList.add("box");
-    let content;
-    for (let i = 0; i < length; i++) {
-        box.innerHTML = (list[i])
+
+function createsBoxWithNumber(list, length) { //list contiene array numeri, length contiene lunghezza array
+    /* let content = list[i]; */
+
+    for (let i=0; i < length; i++) {
+        let box = document.createElement('div');
+        box.classList.add("box");
+        box.innerHTML = (list[i]);
+        game.appendChild(box);
     }
-    game.appendChild(box);
+    
+    /* for (let i = 0; i < length; i++) {
+        
+    }
+    game.appendChild(box); */
     return "ciao";
 }
 
