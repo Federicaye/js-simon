@@ -24,7 +24,6 @@ console.log(list);
 let game = document.getElementById("game");
 
 function createsBoxWithNumber(list, length) { //list contiene array numeri, length contiene lunghezza array
-    /* let content = list[i]; */
 
     for (let i=0; i < length; i++) {
         let box = document.createElement('div');
@@ -33,13 +32,15 @@ function createsBoxWithNumber(list, length) { //list contiene array numeri, leng
         game.appendChild(box);
     }
     
-    /* for (let i = 0; i < length; i++) {
-        
-    }
-    game.appendChild(box); */
     return "ciao";
 }
 
 let listB = [2, 5, 7, 8];
 lenghtB = listB.length;
 createsBoxWithNumber(listB, lenghtB);
+
+let buttonSendNumbers = document.getElementById("buttonSendNumbers");
+
+buttonSendNumbers.addEventListener("click", function(e) {
+
+})
