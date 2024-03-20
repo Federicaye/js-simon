@@ -40,6 +40,16 @@ let listB = [2, 5, 7, 8];
 lenghtB = listB.length;
 createsBoxWithNumber(listB, lenghtB);
 
+let play = document.getElementById("play");
+play.addEventListener("click", function () {
+    let listy = [];
+    
+    let listr = generateRandomNumber(1,100,listy,5);
+    console.log(listy);
+    createsBoxWithNumber(listr, listr.length)
+   
+}) 
+
 let buttonSendNumbers = document.getElementById("buttonSendNumbers");
 
 //raccolgo numeri dell'utente
@@ -51,6 +61,8 @@ buttonSendNumbers.addEventListener("click", function (e) {
     listNumber.forEach(element => {
         userNumbers.push(element.value);
         console.log(element.value);
-        console.log(userNumbers);
     });
+    console.log(userNumbers);
+    createsBoxWithNumber (userNumbers, userNumbers.length);
 })
+
