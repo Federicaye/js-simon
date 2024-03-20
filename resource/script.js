@@ -14,6 +14,7 @@ function generateRandomNumber(min, max, list, howMany) {
         }
     }
     return list;
+
 }
 
 /* let list = [];
@@ -69,14 +70,26 @@ buttonSendNumbers.addEventListener("click", function (e) {
     console.log(listNumber);
 
     listNumber.forEach(element => {
-        userNumbers.push(element.value);
+        userNumbers.push(parseInt(element.value));
         console.log(element.value);
     });
     console.log(userNumbers);
     createsBoxWithNumber(userNumbers, userNumbers.length);
+    //confronto i numeri
+    let resultList = [];
+    userNumbers.forEach(element => {
+        let confront = listy.includes(element);
+        if (confront) {
+            resultList.push(element);
+            result = true;
+        }
+        console.log(resultList);
+        console.log(confront);
+    })
 })
 
-let resultlist = "";
+
+/* let resultlist = "";
 userNumbers.forEach(element => {
     let confront = listy.includes(element);
     if (confront) {
@@ -85,4 +98,4 @@ userNumbers.forEach(element => {
     }
  console.log(resultlist);
  console.log(confront);
-})
+}) */
