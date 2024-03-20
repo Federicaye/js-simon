@@ -2,7 +2,6 @@ function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-
 /* funzione che genera un arrey di numeri casuali diversi */
 function generateRandomNumber(min, max, list, howMany) {
     let check = false;
@@ -41,13 +40,22 @@ lenghtB = listB.length;
 createsBoxWithNumber(listB, lenghtB);
 
 let play = document.getElementById("play");
-play.addEventListener("click", function () {
+
+function playGame(){
     let listy = [];
     
     let listr = generateRandomNumber(1,100,listy,5);
     console.log(listy);
     createsBoxWithNumber(listr, listr.length)
-   
+}
+play.addEventListener("click", function () {
+    /* let listy = [];
+    
+    let listr = generateRandomNumber(1,100,listy,5);
+    console.log(listy);
+    createsBoxWithNumber(listr, listr.length)
+    */
+   playGame();
 }) 
 
 let buttonSendNumbers = document.getElementById("buttonSendNumbers");
