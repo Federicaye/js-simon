@@ -23,15 +23,16 @@ console.log(list);
 
 let game = document.getElementById("game");
 
+/* questa funzione crea dei box con all'interno dei numeri presi da un arrey */
 function createsBoxWithNumber(list, length) { //list contiene array numeri, length contiene lunghezza array
 
-    for (let i=0; i < length; i++) {
+    for (let i = 0; i < length; i++) {
         let box = document.createElement('div');
         box.classList.add("box");
         box.innerHTML = (list[i]);
         game.appendChild(box);
     }
-    
+
     return "ciao";
 }
 
@@ -41,6 +42,11 @@ createsBoxWithNumber(listB, lenghtB);
 
 let buttonSendNumbers = document.getElementById("buttonSendNumbers");
 
-buttonSendNumbers.addEventListener("click", function(e) {
-
+buttonSendNumbers.addEventListener("click", function (e) {
+    e.preventDefault();
+    const listNumber = document.querySelectorAll(".f").values;
+    console.log(listNumber);
+    listNumber.forEach(element => {
+        console.log(element);
+    });
 })
