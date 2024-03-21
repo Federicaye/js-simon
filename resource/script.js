@@ -57,7 +57,7 @@ function playGame() {
 }
 
 const myFunction = () => {
-    let box = document.getElementById("box");
+    let box = querySelectorAll("box");
     box.classList.add("d-none");
 };
 
