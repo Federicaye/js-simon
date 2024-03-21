@@ -1,9 +1,11 @@
 .box {
-    width: 40px;
+    width: calc(100% / 5);
     height: 40px;
-    background-color: blueviolet;
+    background-color: rgb(165, 136, 192);
+    border: 1px solid violet;
+    text-align: center;
 }
 
 .f {
-width: 50px;
+width: 50 px;
 }

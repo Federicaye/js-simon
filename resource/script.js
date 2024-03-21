@@ -11,6 +11,7 @@ function generateRandomNumber(min, max, list, howMany) {
         if (!list.includes(randomNumber)) {
             list.push(randomNumber);
             check = true;
+
         }
     }
     return list;
@@ -49,7 +50,17 @@ function playGame() {
     let listr = generateRandomNumber(1, 100, listy, 5);
     console.log(listy);
     createsBoxWithNumber(listr, listr.length)
+    //timeout
+    
+    
+    setTimeout(myFunction, 2000);
 }
+
+const myFunction = () => {
+    let box = document.getElementById("box");
+    box.classList.add("d-none");
+};
+
 play.addEventListener("click", function () {
     /* let listy = [];
     
@@ -58,6 +69,7 @@ play.addEventListener("click", function () {
     createsBoxWithNumber(listr, listr.length)
     */
     playGame();
+
 })
 
 let buttonSendNumbers = document.getElementById("buttonSendNumbers");
@@ -86,6 +98,7 @@ buttonSendNumbers.addEventListener("click", function (e) {
         console.log(resultList);
         console.log(confront);
     })
+
 })
 
 
